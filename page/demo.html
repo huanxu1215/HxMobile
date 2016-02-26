@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8">
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <title>mobile demo</title>
+    <link rel="stylesheet" type="text/css" href="../css/hxmobile.css">
+    <style type="text/css" media="screen">
+    	.page_div{
+    		padding: 10px;
+    	}
+    	.page_div p{
+    		font-size: 12px;
+    		color: red;
+    		padding: 5px 0;
+    	}
+    	.btn_a{
+    		background-color: #46CA5E;
+    		color: #fff;
+    		height:30px;
+    		display: inline-block;
+    		border-radius: 5px;
+    		max-width: 150px;
+		    line-height: 30px;
+		    text-decoration: none;
+		    text-align: center;
+		    padding: 0 5px;
+		    margin: 10px 0;
+    	}
+    </style>
+</head>
+<body>
+	<!--侧边menu-->
+	<div id="aside_container">
+		<aside id="left_push_aside" data-position="left" data-transition="push">
+			<div>我是左边菜单</div>
+		</aside>
+	</div>
+	<div id="section_container">
+		<section id="home" data-default="true">
+			<article id="home_acticle1" class="active">
+				<div class="page_div">
+					<h3>HxMobile</h3>
+					<p>卡片式结构，一个section对应一个卡片</p>
+					<p>按需加载section模板，section Id与模板的名称需要一致</p>
+					<p>一个section里包含多个article</p>
+					<div><a href="#page2" class="btn_a" data-target="section">切换到已有的page</a></div>
+					<div><a href="#" class="btn_a" id="gotoPage3">切换到新的page</a></div>
+					<div><a href="#home_acticle2" class="btn_a" data-target="article">显示另一个article</a></div>
+					<div><a href="#left_push_aside" data-target="menu" class="btn_a">打开侧边菜单(push)</a></div>
+					<div><a href="javascript:;" class="btn_a" id="btn_center">Popup center</a></div>
+					<div><a href="javascript:;" class="btn_a" id="btn_loading">loading</a></div>
+					<div><a href="javascript:;" class="btn_a" id="btn_toast">toast提示</a></div>
+				</div>
+			</article>
+			<article id="home_acticle2">
+				<div><a href="#home_acticle1" class="btn_a" data-target="article">回上一个article</a></div>
+			</article>
+		</section>
+		<section id="page2" data-transition="slideUp">
+			<div class="page_div">
+				<a href="#" data-target="back" class="btn_a">返回</a>
+			</div>
+		</section>
+	</div>
+	<script type="text/javascript" data-main="../js/apps/entry/index" src="../js/lib/require.js"></script>
+</body>
+</html>
